@@ -17,12 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-'Verify the correct website is opened'
-WebUI.verifyMatch(WebUI.getWindowTitle(), 'CURA Healthcare Service', false)
+'Select from dropdown'
+WebUI.selectOptionByLabel(findTestObject('make appointment page/Page_CURA Healthcare Service/select_from_drop_down'), 'Hongkong CURA Healthcare Center', 
+    false)
 
-'Click on HandbugerMenu Icon'
-WebUI.click(findTestObject('Object Repository/Home page/HandbugerMenu Icon'))
+'select a checkbox'
+WebUI.click(findTestObject('make appointment page/Page_CURA Healthcare Service/CheckBox_Apply for hospital readmission'))
 
-'Login Text button'
-WebUI.click(findTestObject('Object Repository/Home page/Login text'))
+'Select Medicare'
+WebUI.click(findTestObject('make appointment page/Page_CURA Healthcare Service/RadioButton_Medicare'))
+
+'Select the calender icon\r\n'
+WebUI.click(findTestObject('make appointment page/Page_CURA Healthcare Service/Calender Button'))
+
+'Select day 12'
+WebUI.click(findTestObject('make appointment page/Page_CURA Healthcare Service/Day_twelve'))
+
+'Input comment'
+WebUI.setText(findTestObject('make appointment page/Page_CURA Healthcare Service/Comment_field'), 'yet another automated test on on an healthcare service website')
+
+'click on book Appintment'
+WebUI.click(findTestObject('make appointment page/Page_CURA Healthcare Service/Book Appointment Button'))
 

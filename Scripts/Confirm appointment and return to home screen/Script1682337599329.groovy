@@ -17,12 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-'Verify the correct website is opened'
-WebUI.verifyMatch(WebUI.getWindowTitle(), 'CURA Healthcare Service', false)
+'To verify the option selected by the user is what  being returned from the database '
+WebUI.verifyElementText(findTestObject('Appointment Confirmation/Page_CURA Healthcare Service/Hongkong CURA Healthcare Center'), 
+    'Hongkong CURA Healthcare Center')
 
-'Click on HandbugerMenu Icon'
-WebUI.click(findTestObject('Object Repository/Home page/HandbugerMenu Icon'))
+'To verify the comment by the user is what  being returned from the database '
+WebUI.verifyElementText(findTestObject('Appointment Confirmation/Page_CURA Healthcare Service/Verify comment'), 'yet another automated test on on an healthcare service website')
 
-'Login Text button'
-WebUI.click(findTestObject('Object Repository/Home page/Login text'))
+'returns the user the home page'
+WebUI.click(findTestObject('Appointment Confirmation/Page_CURA Healthcare Service/Go to Homepage Button'))
+
+'A few seconds delay\r\n'
+WebUI.delay(6)
 

@@ -17,9 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+'User name'
 WebUI.setText(findTestObject('Home page/Login page/input_Username'), 'John Doe')
 
+'password'
 WebUI.setText(findTestObject('Home page/Login page/input_Password'), 'ThisIsNotAPassword')
 
+'click login button'
 WebUI.click(findTestObject('Home page/Login page/login_button'))
 
